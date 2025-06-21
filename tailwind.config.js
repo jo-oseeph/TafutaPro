@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        brand: "#718CD7",      // Your main blue
-        coral: "#F76C6C",      // Complementary red/coral
+        brand: "#1E42B4",      // Your main blue
+        coral: "#2560E6",      // Complementary red/coral
         background: "#F9FAFB", // Light background
         heading: "#1E293B",    // Dark text
         muted: "#6B7280",      // Gray text
