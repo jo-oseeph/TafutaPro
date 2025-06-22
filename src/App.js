@@ -8,6 +8,8 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Services from './pages/Service';
 import Contact from './pages/Contact';
+import CategoryPage from "./pages/CategoryPage";
+
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/services/:category" element={<CategoryPage />} />
+          {/* Add more routes as needed */}
         </Routes>
       </main>
     </>
