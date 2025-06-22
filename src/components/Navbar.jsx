@@ -49,18 +49,18 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white px-4 pt-2 pb-4 space-y-3 shadow-md">
-            <Link to="/" className="block text-heading hover:text-brand">Home</Link>
-            <Link to="/services" className="block text-heading hover:text-brand">Services</Link>
-            <Link to="/about" className="block text-heading hover:text-brand">About</Link>
-            <Link to="/contact" className="block text-heading hover:text-brand">Contact</Link>
+            <Link to="/"  onClick={() => setIsOpen(false)} className="block text-heading hover:text-brand">Home</Link>
+            <Link to="/services"  onClick={() => setIsOpen(false)} className="block text-heading hover:text-brand">Services</Link>
+            <Link to="/about"  onClick={() => setIsOpen(false)} className="block text-heading hover:text-brand">About</Link>
+            <Link to="/contact"  onClick={() => setIsOpen(false)} className="block text-heading hover:text-brand">Contact</Link>
           <div className="pt-2 space-y-2">
             <Link to="/login">
-            <button className="w-full text-brand border border-brand px-4 py-2 rounded hover:bg-brand hover:text-white transition">
+            <button  onClick={() => setIsOpen(false)} className="w-full text-brand border border-brand px-4 py-2 rounded hover:bg-brand hover:text-white transition">
               Login
             </button>
             </Link>
             <Link to="/signup">
-            <button className="w-full bg-brand text-white px-4 py-2 rounded hover:bg-heading transition">
+            <button  onClick={() => setIsOpen(false)} className="w-full bg-brand text-white px-4 py-2 rounded hover:bg-heading transition">
               Sign Up
             </button>
              </Link>
