@@ -6,7 +6,7 @@ export default function Hero() {
           Connect Instantly with Trusted Local Service Providers
         </h1>
         <p className="text-lg md:text-xl text-white/90 mb-10">
-          Discover services around you, book instantly, or grow your business by joining TafutaPro as a service provider.
+          Discover services around you, book instantly, and make secure payments through M-pesa, or grow your business by joining TafutaPro as a service provider.
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
