@@ -10,11 +10,12 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-          <button className="bg-white text-brand font-semibold px-6 py-3 rounded-md shadow hover:bg-gray-100 transition">
-            Become a Service Provider
-          </button>
+        
           <button className="bg-heading text-white font-semibold px-6 py-3 rounded-md shadow hover:bg-heading/90 transition">
             Browse Services
+          </button>
+            <button className="bg-white text-brand font-semibold px-6 py-3 rounded-md shadow hover:bg-gray-100 transition">
+            Become a Service Provider
           </button>
         </div>
       </div>
