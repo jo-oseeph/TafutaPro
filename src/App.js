@@ -23,7 +23,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
+          <Route path="/Signup" element={<Signup />} />
           <Route path="/services/:category" element={<CategoryPage />} />
           {/* Add more routes as needed */}
         </Routes>
