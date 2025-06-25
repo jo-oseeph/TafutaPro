@@ -10,6 +10,7 @@ import Signup from './pages/Signup';
 import Services from './pages/Service';
 import Contact from './pages/Contact';
 import CategoryPage from "./pages/CategoryPage";
+import ProviderProfile from "./pages/ProviderProfile";
 
 
 function App() {
@@ -25,7 +26,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/Signup" element={<Signup />} />
           <Route path="/services/:category" element={<CategoryPage />} />
-          {/* Add more routes as needed */}
+          <Route path="/provider/:id" element={<ProviderProfile />} />
+     
         </Routes>
         <Footer />
       </main>
