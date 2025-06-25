@@ -10,6 +10,7 @@ import {
 
 const services = [
   { name: "Plumbers", icon: Wrench, slug: "plumber" },
+
   { name: "Carpenters", icon: Hammer, slug: "carpenters" },
   { name: "Electricians", icon: Zap, slug: "electrician" },
   { name: "Delivery", icon: Truck, slug: "delivery" },
