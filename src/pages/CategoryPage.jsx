@@ -72,7 +72,7 @@ export default function CategoryPage() {
           Explore Top {category}s Near You
         </h1>
         <p className="text-muted mt-2 text-sm sm:text-base">
-          Connect with trusted and highly-rated {category}s in your area — fast, affordable and reliable.
+          Connect with trusted and highly-rated {category}s in your area, fast, affordable and reliable.
         </p>
       </div>
 
