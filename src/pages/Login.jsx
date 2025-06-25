@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FiEye, FiEyeOff } from 'react-icons/fi'; // 👈 Import icons
 
 const Login = () => {
   const [identifier, setIdentifier] = useState('');
@@ -12,13 +13,13 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Simulated login logic (replace with real authentication)
+    // Placeholder login logic
     if (identifier === 'admin@tafuta.com') {
       navigate('/admin/dashboard');
     } else if (identifier.startsWith('07')) {
-      navigate('/provider/dashboard'); // Simulated phone = provider
+      navigate('/provider/dashboard');
     } else if (identifier.includes('@')) {
-      navigate('/customer/dashboard'); // Simulated email = customer
+      navigate('/customer/dashboard');
     } else {
       setError('Invalid credentials or role not recognized.');
     }
@@ -54,9 +55,9 @@ const Login = () => {
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute inset-y-0 right-3 flex items-center text-sm text-blue-600 hover:underline focus:outline-none"
+                className="absolute top-1/2 right-3 transform -translate-y-1/2 text-blue-600 focus:outline-none"
               >
-                {showPassword ? 'Hide' : 'Show'}
+                {showPassword ? <FiEyeOff size={20} /> : <FiEye size={20} />}
               </button>
             </div>
           </div>
