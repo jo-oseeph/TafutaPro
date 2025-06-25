@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FiEye, FiEyeOff } from 'react-icons/fi'; // 👈 Import icons
+import { FiEye, FiEyeOff } from 'react-icons/fi'; // Import icons
 
 const Login = () => {
   const [identifier, setIdentifier] = useState('');
