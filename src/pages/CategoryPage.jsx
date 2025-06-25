@@ -1,10 +1,11 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Loader2, MapPin } from "lucide-react";
 
-// Dummy locations for filtering
+// ✅ Dummy locations for filtering
 const dummyLocations = ["Nairobi", "Mombasa", "Kisumu", "Nakuru"];
 
+// ✅ Dummy service providers
 const dummyProviders = [
   {
     id: 1,
@@ -31,13 +32,15 @@ const dummyProviders = [
 
 export default function CategoryPage() {
   const { category } = useParams();
+  const navigate = useNavigate(); // ✅ Used for routing to profile
+
   const [providers, setProviders] = useState([]);
   const [filteredProviders, setFilteredProviders] = useState([]);
   const [location, setLocation] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(true);
 
-  // Simulate API fetch
+  // ✅ Simulate API fetch
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
@@ -47,7 +50,7 @@ export default function CategoryPage() {
     }, 1000);
   }, [category]);
 
-  // Filter based on location and search
+  // ✅ Filter providers by location and search input
   useEffect(() => {
     let filtered = providers;
 
@@ -102,7 +105,7 @@ export default function CategoryPage() {
         </select>
       </div>
 
-      {/* Spinner */}
+      {/* Loader or Results */}
       {loading ? (
         <div className="flex justify-center items-center py-20">
           <Loader2 className="animate-spin text-brand w-8 h-8" />
@@ -116,6 +119,7 @@ export default function CategoryPage() {
               key={provider.id}
               className="bg-white shadow-sm border rounded-lg p-4 hover:shadow-md transition"
             >
+              {/* Profile info */}
               <div className="flex items-center gap-4">
                 <img
                   src={provider.image}
@@ -132,7 +136,12 @@ export default function CategoryPage() {
                   </p>
                 </div>
               </div>
-              <button className="mt-4 w-full bg-brand text-white py-2 rounded hover:bg-heading transition">
+
+              {/* ✅ View Profile button navigates to provider page */}
+              <button
+                onClick={() => navigate(`/provider/${provider.id}`)}
+                className="mt-4 w-full bg-brand text-white py-2 rounded hover:bg-heading transition"
+              >
                 View Profile
               </button>
             </div>
