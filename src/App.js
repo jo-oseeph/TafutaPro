@@ -11,6 +11,8 @@ import Services from './pages/Service';
 import Contact from './pages/Contact';
 import CategoryPage from "./pages/CategoryPage";
 import ProviderProfile from "./pages/ProviderProfile";
+import ProviderDashboard from "./pages/ProviderDashboard";
+import CustomerDashboard from "./pages/CustomerDashboard";
 
 
 function App() {
@@ -27,6 +29,9 @@ function App() {
           <Route path="/Signup" element={<Signup />} />
           <Route path="/services/:category" element={<CategoryPage />} />
           <Route path="/provider/:id" element={<ProviderProfile />} />
+          <Route path="/provider-dashboard" element={<ProviderDashboard />} />
+          <Route path="/customer-dashboard" element={<CustomerDashboard />} />
+          
      
         </Routes>
         <Footer />
