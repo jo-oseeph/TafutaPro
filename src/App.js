@@ -13,6 +13,10 @@ import CategoryPage from "./pages/CategoryPage";
 import ProviderProfile from "./pages/ProviderProfile";
 import ProviderDashboard from "./pages/ProviderDashboard";
 import CustomerDashboard from "./pages/CustomerDashboard";
+import AdminDashboard from "./pages/AdminDashboard"; 
+
+
+
 
 
 function App() {
@@ -31,6 +35,7 @@ function App() {
           <Route path="/provider/:id" element={<ProviderProfile />} />
           <Route path="/provider-dashboard" element={<ProviderDashboard />} />
           <Route path="/customer-dashboard" element={<CustomerDashboard />} />
+          <Route path="/admin" element={<AdminDashboard />} />
           
      
         </Routes>
